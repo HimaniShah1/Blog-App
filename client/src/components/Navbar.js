@@ -6,7 +6,7 @@ function Navbar() {
    const {setUserInfo, userInfo} = useContext(UserContext);
 
     useEffect(() => {
-        fetch('http://localhost:3001/profile', {
+        fetch('https://blog-app-backend1.onrender.com/profile', {
             credentials: 'include',
         }).then(response => {
             response.json().then(userInfo => {
@@ -16,7 +16,7 @@ function Navbar() {
     },[]);
 
     function logout() {
-        fetch('http//localhost:3001/logout',{
+        fetch('https://blog-app-backend1.onrender.com/logout',{
             credentials: 'include',
             method: 'POST',
         });

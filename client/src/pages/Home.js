@@ -4,7 +4,7 @@ import Post from '../components/Post.js'
 function Home() {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:3001/post').then(response => {
+    fetch('https://blog-app-backend1.onrender.com/post').then(response => {
       response.json().then(posts => {
         setPosts(posts);
       })

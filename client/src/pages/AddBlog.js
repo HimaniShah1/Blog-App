@@ -33,7 +33,7 @@ function AddBlog() {
     data.set('file', files[0])
     e.preventDefault();
     console.log(files);
-    const response = await fetch('http://localhost:3001/post',{
+    const response = await fetch('https://blog-app-backend1.onrender.com/post',{
       method: 'POST',
       body: data,
       credentials: 'include',

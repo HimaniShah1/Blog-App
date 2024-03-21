@@ -10,7 +10,7 @@ function Post({_id,title, summary, cover, content, createdAt, author}) {
       <div className='post-meta-data'>
          <div className='blog-image'>
           <Link to = {`/post/${_id}`} >
-          <img src={'http://localhost:3001/' + cover} alt="blog title"/>
+          <img src={'https://blog-app-backend1.onrender.com/' + cover} alt="blog title"/>
           </Link>
          </div>
          <div className='blog-meta-data'>

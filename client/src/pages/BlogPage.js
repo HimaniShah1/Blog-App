@@ -14,7 +14,7 @@ function BlogPage() {
     const [showShareModal, setShowShareModal] = useState(false);
 
     useEffect(() => {
-       fetch(`http://localhost:3001/post/${id}`)
+       fetch(`https://blog-app-backend1.onrender.com/post/${id}`)
         .then(response => {
             response.json().then(postInfo => {
                 setPostInfo(postInfo);
@@ -26,7 +26,7 @@ function BlogPage() {
     if(!postInfo) return '';
 
     function handleDelete() {
-      fetch(`http://localhost:3001/post/${postInfo._id}`, {
+      fetch(`https://blog-app-backend1.onrender.com/post/${postInfo._id}`, {
         method: 'DELETE'
       })
       .then(response => {
@@ -62,7 +62,7 @@ function BlogPage() {
                     <div className='author'>by @{postInfo.author.username}</div>
 
                     <div className='image'>
-                        <img src={`http://localhost:3001/${postInfo.cover}`} alt="" />
+                        <img src={`https://blog-app-backend1.onrender.com/${postInfo.cover}`} alt="" />
                     </div>
 
                     <div className='content' dangerouslySetInnerHTML={{ __html: postInfo.content }} />
